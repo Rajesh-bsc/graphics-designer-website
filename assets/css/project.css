@@ -1,0 +1,195 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+}
+body{
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+    cursor: none;
+}
+:root{
+    --primary-font:"Plus Jakarta Sans", sans-serif;
+    --secondary-font:"Syne", sans-serif;
+    --primary-color:white;
+    --secondary-color:#FF4F00;
+    --third-color: #EC4900;
+}
+h1,h2,h3,h4{
+    font-family: var(--secondary-font);
+}
+p,a,button,li{
+    font-family: var(--primary-font);
+}
+
+#project-hero-banner{
+    height: 1400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.project-banner-col{
+    height: 85%;
+    width: 89%;
+   
+}
+.project-banner-title{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 80px;
+}
+.project-banner-title h1{
+    font-size: 70px;
+    line-height: 0.85em;
+    letter-spacing: -5.28px;
+}
+
+.project-grid-col{
+    height: 90%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 30px;
+   
+}
+.project-grid-list-1{
+    grid-row: 1/3;
+    
+}
+.project-grid-list-col{
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/01-2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* display: flex; */
+}
+.project-grid-list-2 {
+    grid-row: 1/2;
+}
+.project-grid-list-2 .project-grid-list-col{
+    background-image: url('../images/02-1-1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.project-overlay-col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(252, 252, 252, 0.842);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.project-grid-list-col:hover .project-overlay-col{
+    opacity: 1;
+}
+.project-inner-content{
+    width: 80%;
+    text-align: center;
+    color: black;
+}
+.project-inner-content h3{
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+.project-inner-content p{
+    line-height: 25px;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+.project-inner-content button{
+    padding: 10px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.project-grid-list-3{
+    grid-row: 1/3;
+}
+.project-grid-list-3 .project-grid-list-col{
+    background-image: url('../images/03-2.jpg');
+}
+.project-grid-list-4{
+    grid-row: 2/4;
+}
+.project-grid-list-4 .project-grid-list-col{
+    background-image: url('../images/05-2.jpg');
+}
+.project-grid-list-5 .project-grid-list-col{
+    background-image: url('../images/04-2.jpg');
+}
+.project-grid-list-6 .project-grid-list-col{
+    background-image: url('../images/06-2.jpg');
+}
+
+@media screen and (max-width:480px){
+    body{
+        overflow-x: hidden;
+    }
+    #project-hero-banner{
+        height: 4800px;
+       
+    }
+    .project-banner-title h1{
+        font-size: 35px;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+    .project-banner-title h1 .highlight-underline::after{
+        bottom: -10px;
+    }
+    .project-banner-col{
+        height: 98%;
+        width: 95%;
+       
+    }
+    .project-grid-col{
+        height: 100%;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        flex-wrap: nowrap;
+        flex-grow: 1;
+    }
+    .project-grid-list-1{
+        grid-row: auto;
+        width: 100%;
+        height: 600px;
+       
+    }
+    .project-grid-list-2{
+        grid-row: auto;
+        height: 600px;
+        object-fit: cover;
+    }
+    .project-grid-list-3{
+        grid-row: auto;
+        height: 600px;
+        object-fit: cover;
+    }
+    .project-grid-list-4{
+        grid-row: auto;
+        height: 600px;
+        object-fit: cover;
+    }
+    .project-grid-list-5{
+        grid-row: auto;
+        height: 600px;
+        object-fit: cover;
+    }
+    .project-grid-list-6{
+        grid-row: auto;
+        height: 600px;
+        object-fit: cover;
+    }
+}
